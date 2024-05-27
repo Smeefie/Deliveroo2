@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: producer
+spec:
+  selector:
+    app: producer
+  ports:
+    - protocol: "TCP"
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: producer
+spec:
+  selector:
+    matchLabels:
+      app: producer
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: producer
+    spec:
+      containers:
+        - name: producer
+          image: smeefie/producerprototype:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: kafka-service
+              value: "kafka-service"

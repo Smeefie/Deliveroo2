@@ -19,3 +19,4 @@ FROM openjdk:20-oracle
 MAINTAINER smeefie
 COPY target/JWTPrototype-0.0.1-SNAPSHOT.jar authentication-prototype-1.0.0.jar
 ENTRYPOINT ["java","-jar","/authentication-prototype-1.0.0.jar"]
+

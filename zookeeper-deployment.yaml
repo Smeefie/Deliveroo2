@@ -21,7 +21,7 @@ spec:
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: zookeeper-deploy
+  name: zookeeper
 spec:
   replicas: 1
   selector:

@@ -47,3 +47,5 @@ spec:
               value: "0"
             - name: KAFKA_CREATE_TOPICS
               value: prototype-topic:1:1
+
+                

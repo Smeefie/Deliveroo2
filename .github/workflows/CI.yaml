@@ -4,6 +4,7 @@ on: [push]
 
 jobs:
   DEV:
-    trigger:
-      include:
-        - local: ../ProducerPrototype/ProducerCI.yaml
+    steps:
+      - trigger:
+        include:
+          - local: ../ProducerPrototype/ProducerCI.yaml

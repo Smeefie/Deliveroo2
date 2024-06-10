@@ -2,7 +2,7 @@ name: CI
 
 on: [push]
 
-trigger-job:
+trigger_job:
   trigger:
     include:
       - local: ../ProducerPrototype/ProducerCI.yaml
